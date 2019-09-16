@@ -10,31 +10,18 @@
       { "v": "EAST",    "map": "EAST"  },
       { "v": "E",       "map": "EAST"  },
       { "v": "WEST",    "map": "WEST"  },
-      { "v": "W",       "map": "WEST"  }
+      { "v": "W",       "map": "WEST"  },
+      { "v": "STOP",       "map": "STOP"  },
+      { "v": "REST",       "map": "STOP"  }
     ],
 
     "rooms": {
       "DSERT": {
         "name": "You find yourself on a dark desert highway",
-        "desc": "Cool wind breezes through your hair \r\nThe warm smell of colitas rises up through the air",
+        "desc": "Cool wind breezes through your hair \r\nThe warm smell of colitas rises up through the air\r\nYou see a shimmering light to the NORTH",
         "exits": [
           {
             "verb": "NORTH",
-            "target": "DSRT2",
-            "condition": ""
-          },
-          {
-            "verb": "SOUTH",
-            "target": "DSRT2",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "DSRT2",
-            "condition": ""
-          },
-          {
-            "verb": "EAST",
             "target": "DSRT2",
             "condition": ""
           },
@@ -48,26 +35,16 @@
         "inventory": []
       },
       "DSRT2": {
-        "name": "Up ahead in the distance \r\nYou see a shimmering light",
-        "desc": "Your head grows heavy and your sight grows dim \r\nYou feel you should stop for the night",
+        "name": "Your head grows heavy and your sight grows dim \r\n",
+        "desc": "You feel you should STOP for the night",
         "exits": [
           {
+            "verb": "STOP",
+            "target": "DSRT3",
+            "condition": ""
+          },
+          {
             "verb": "NORTH",
-            "target": "DSRT3",
-            "condition": ""
-          },
-          {
-            "verb": "SOUTH",
-            "target": "DSRT3",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "DSRT3",
-            "condition": ""
-          },
-          {
-            "verb": "EAST",
             "target": "DSRT3",
             "condition": ""
           },
@@ -81,24 +58,9 @@
       },
       
       "DSRT3": {
-        "name": "There she stands in the doorway, you hear the mission bell",
-        "desc": "You think to yourself: This could be Heaven or this could be Hell \r\nThen she lit up a candle and you showed me the way\r\nThere were voices down the corridor \r\nYou thought you heard them say",
+        "name": "You wake up",
+        "desc": "to the EAST, a woman stands in the doorway",
         "exits": [
-          {
-            "verb": "NORTH",
-            "target": "HTEL1",
-            "condition": ""
-          },
-          {
-            "verb": "SOUTH",
-            "target": "HTEL1",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "HTEL1",
-            "condition": ""
-          },
           {
             "verb": "EAST",
             "target": "HTEL1",
@@ -113,26 +75,11 @@
         "inventory": []
       },
       "HTEL1": {
-        "name": "Welcome to the Hotel California\r\nSuch a lovely place\r\nSuch a lovely face",
-        "desc": "Plenty of room at the Hotel California\r\nAny time of year\r\nYou can find it here",
+        "name": "The woman lights a candle and shows you the way to the SOUTH",
+        "desc": "",
         "exits": [
           {
-            "verb": "NORTH",
-            "target": "HTEL2",
-            "condition": ""
-          },
-          {
             "verb": "SOUTH",
-            "target": "HTEL2",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "HTEL2",
-            "condition": ""
-          },
-          {
-            "verb": "EAST",
             "target": "HTEL2",
             "condition": ""
           },
@@ -145,8 +92,8 @@
         "inventory": []
       },
       "HTEL2": {
-        "name": "Her mind is Tiffany-twisted\r\nShe got the Mercedes bends\r\nShe got a lot of pretty, pretty boys she calls friends",
-        "desc": "How they dance in the courtyard, sweet summer sweat\r\nSome dance to remember, some dance to forget",
+        "name": "Some voices down the corridor say:",
+        "desc": "Welcome to the Hotel California.\r\nto the NORTH there is a door to the courtyard\r\na captain stands to the SOUTH\r\nThe Master's chambers lie to the EAST\r\nA door that looks like an exit lies to the WEST",
         "exits": [
           {
             "verb": "NORTH",
@@ -155,17 +102,17 @@
           },
           {
             "verb": "SOUTH",
-            "target": "HTEL3",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "HTEL3",
+            "target": "HTEL4",
             "condition": ""
           },
           {
             "verb": "EAST",
-            "target": "HTEL3",
+            "target": "HTEL5",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "LEAVE",
             "condition": ""
           },
           {
@@ -177,27 +124,27 @@
         "inventory": []
       },
       "HTEL3": {
-        "name": "So you called up the Captain and say:\r\nPlease bring me my wine",
-        "desc": "He said:\r\nWe haven't had that spirit here since nineteen sixty nine.",
+        "name": "There are a lot of pretty, pretty, boys dancing in the courtyard",
+        "desc": "Sweet summer sweat beads off of their foreheads\r\nSome dance to remember, some dance to forget\r\nDoors back to the Hotel lobby surround you",
         "exits": [
           {
             "verb": "NORTH",
-            "target": "HTEL4",
+            "target": "HTEL2",
             "condition": ""
           },
           {
             "verb": "SOUTH",
-            "target": "HTEL4",
+            "target": "HTEL2",
             "condition": ""
           },
           {
             "verb": "WEST",
-            "target": "HTEL4",
+            "target": "HTEL2",
             "condition": ""
           },
           {
             "verb": "EAST",
-            "target": "HTEL4",
+            "target": "HTEL2",
             "condition": ""
           },
           {
@@ -209,27 +156,27 @@
         "inventory": []
       }, 
       "HTEL4": {
-        "name": "And still those voices are calling from far away",
-        "desc": "Wake you up in the middle of the night\r\nJust to hear them say",
+        "name": "You walk up to the captain and ask for some wine",
+        "desc": "The captain responds: \r\n    \"We haven't had that spirit here since 1969\"\r\nThe voices are still calling from far away\r\nDoors back to the Hotel lobby surround you",
         "exits": [
           {
             "verb": "NORTH",
-            "target": "HTEL5",
+            "target": "HTEL2",
             "condition": ""
           },
           {
             "verb": "SOUTH",
-            "target": "HTEL5",
+            "target": "HTEL2",
             "condition": ""
           },
           {
             "verb": "WEST",
-            "target": "HTEL5",
+            "target": "HTEL2",
             "condition": ""
           },
           {
             "verb": "EAST",
-            "target": "HTEL5",
+            "target": "HTEL2",
             "condition": ""
           },
           {
@@ -241,91 +188,27 @@
         "inventory": []
       },
       "HTEL5": {
-        "name": "Welcome to the Hotel California\r\nSuch a lovely place\r\nSuch a lovely face",
-        "desc": "They livin' it up at the Hotel California\r\nWhat a nice surprise\r\nBring your alibis",
+        "name": "There are mirrors on the ceiling\r\nPink champagne has been left in an ice bucket.",
+        "desc": "The woman comes up to and says:\r\n    \"We are all prisoners here, of our own device\"\r\nThey stab it with their steely knives\r\nbut they just can't kill the beast\r\nDoors back to the Hotel lobby surround you",
         "exits": [
           {
             "verb": "NORTH",
-            "target": "HTEL6",
+            "target": "HTEL2",
             "condition": ""
           },
           {
             "verb": "SOUTH",
-            "target": "HTEL6",
+            "target": "HTEL2",
             "condition": ""
           },
           {
             "verb": "WEST",
-            "target": "HTEL6",
+            "target": "HTEL2",
             "condition": ""
           },
           {
             "verb": "EAST",
-            "target": "HTEL6",
-            "condition": ""
-          },
-          {
-            "verb": "QUIT",
-            "target": "LEAVE",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "HTEL6": {
-        "name": "Mirrors on the ceiling\r\nThe pink champagne on ice\r\nAnd she said:\r\n\"We are all just prisoners here, of our own device\"",
-        "desc": "Band in the master's chambers\r\nThey gathered for the feast\r\nThey stab it with their steely knives\r\nBut they just can't kill the beast",
-        "exits": [
-          {
-            "verb": "NORTH",
-            "target": "HTEL7",
-            "condition": ""
-          },
-          {
-            "verb": "SOUTH",
-            "target": "HTEL7",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "HTEL7",
-            "condition": ""
-          },
-          {
-            "verb": "EAST",
-            "target": "HTEL7",
-            "condition": ""
-          },
-          {
-            "verb": "QUIT",
-            "target": "LEAVE",
-            "condition": ""
-          }
-        ],
-        "inventory": []
-      },
-      "HTEL7": {
-        "name": "Last thing you remember\r\nYou were running for the door\r\nYou had to find the passage back to the place you were before",
-        "desc": "\"Relax,\" said the night man\"We are programmed to receive\"",
-        "exits": [
-          {
-            "verb": "NORTH",
-            "target": "LEAVE",
-            "condition": ""
-          },
-          {
-            "verb": "SOUTH",
-            "target": "LEAVE",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "LEAVE",
-            "condition": ""
-          },
-          {
-            "verb": "EAST",
-            "target": "LEAVE",
+            "target": "HTEL2",
             "condition": ""
           },
           {
